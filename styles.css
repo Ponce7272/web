@@ -1,0 +1,87 @@
+/* Fondo oscuro minimalista */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1e1e1e;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background: #252525;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Título animado minimalista */
+.title {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #ff0095;
+    animation: titleGlow 1.5s infinite alternate;
+}
+
+@keyframes titleGlow {
+    from { text-shadow: 0 0 10px #ff00aa; }
+    to { text-shadow: 0 0 20px #ff00aa; }
+}
+
+/* Reproductor de música estilizado */
+.player {
+    background: #333;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
+}
+
+audio {
+    width: 100%;
+    filter: brightness(0.8);
+}
+
+/* Contenedor de imagen y video */
+.media-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.media {
+    width: 45%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.media:hover {
+    transform: scale(1.05);
+}
+
+/* Letra de la canción organizada */
+.lyrics {
+    font-size: 1.2em;
+    text-align: left;
+    line-height: 1.4;
+    padding: 20px;
+    background: #333;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.container, .lyrics {
+    animation: fadeIn 1s ease-in-out;
+}
